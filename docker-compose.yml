@@ -1,0 +1,11 @@
+version: '3'
+services:
+  todo:
+    image: todo/golang:latest
+    environment:
+      - TODO_DB=todo.db
+      - TODO_PORT=8000
+      - TODO_LIMIT=20
+    entrypoint: /bin/bash -c "tail -f /dev/null"
+    ports:
+      - 8000:8000
