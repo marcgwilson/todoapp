@@ -5,7 +5,7 @@ services:
     environment:
       - TODO_DB=todo.db
       - TODO_PORT=8000
-      - TODO_LIMIT=20
+      - TODO_LIMIT=5
     volumes:
       - "./todo:/todo"
     entrypoint: /bin/bash -c "tail -f /dev/null"
